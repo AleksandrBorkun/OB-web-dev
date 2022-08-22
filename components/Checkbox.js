@@ -54,6 +54,6 @@ label::before{
 const Checkbox = ({labelTxt, id}) => (
     <CheckboxContainer>
       <input type={"checkbox"} id={id}/>
-      <label for={id}>{labelTxt}</label>
+      <label htmlFor={id}>{labelTxt}</label>
     </CheckboxContainer>
 )
