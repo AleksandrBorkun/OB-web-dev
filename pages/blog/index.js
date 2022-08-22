@@ -43,7 +43,6 @@ export const getStaticProps = async () => {
       "fields.type": "blog",
     })
   ).items;
-  console.log(articles);
   return {
     props: { articles },
   };

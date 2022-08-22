@@ -1,11 +1,15 @@
+import MetaHead from "components/MetaHead";
 import { getEntries } from "contentful/client";
 import { renderComponent } from "contentful/utils";
 
 
-const Home = ({data}) => {
+const Home = ({data, metaHead}) => {
 
   return (
-    data.map(content => renderComponent(content))
+    <>
+    <MetaHead {...metaHead} metaUrl={'https://obweb.dev'}/>
+    {data && data.map(content => renderComponent(content))}
+    </>
   );
 };
 
@@ -16,7 +20,7 @@ export const getStaticProps = async (props)=>{
   })
 
   return {
-    props: {data: entries.items[0].fields.content}
+    props: {data: entries.items[0].fields.content, metaHead: entries.items[0].fields.metaHead.fields}
   }
 }
 

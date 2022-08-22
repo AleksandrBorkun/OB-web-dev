@@ -2,6 +2,7 @@ import { Breadcrumbs, Divider, Link, Stack, Typography } from "@mui/material"
 import { Box } from "@mui/system";
 
 import { ImageConstructor } from "components/Image"
+import MetaHead from "components/MetaHead";
 
 import { getEntries } from "contentful/client"
 import { renderComponent } from "contentful/utils";
@@ -10,9 +11,11 @@ import { getTranslation } from "translations";
 
 
 
-const BlogArticle = ({cover, title, description, date, content}) => {
+const BlogArticle = ({cover, title, description, date, content, metaHead, slug}) => {
 
-    return <Stack spacing={{ xs: 1, sm: 2, md: 4 }}>
+    return <>
+    <MetaHead {...metaHead.fields} metaUrl={`https://obweb.dev/blog/${slug}`}/>
+    <Stack spacing={{ xs: 1, sm: 2, md: 4 }}>
             <ImageConstructor isCover {...cover.fields}/>
             <Breadcrumbs mt={10} mb={5} separator="›" aria-label="breadcrumb" fontSize={'large'}>
                 <Link underline="hover" color="inherit" href="/">
@@ -36,6 +39,7 @@ const BlogArticle = ({cover, title, description, date, content}) => {
                 <SignUpForm/>
             </Box>
         </Stack>
+        </>
 }
 
 export const getServerSideProps = async props =>{
@@ -46,7 +50,7 @@ export const getServerSideProps = async props =>{
         'fields.slug': slug
       })
     return {
-        props: {...articles.items[0].fields}
+        props: {...articles.items[0].fields, slug}
     }
 }
 
