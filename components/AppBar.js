@@ -129,7 +129,7 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-                <Link href={`${page.toLocaleLowerCase()}`} key={page}>
+                <Link href={`/${page.toLocaleLowerCase()}`} key={page}>
                   <MenuItem onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{getTranslation(page)}</Typography>
                   </MenuItem>
