@@ -34,7 +34,7 @@ export const ImageConstructor = ({
     styles={styles}
     isCover={isCover}
     src={
-      url.indexOf("//") === 0 ? `http:${url}${query}` : url
+      url.indexOf("//") === 0 ? `https:${url}${query}` : url
     }
     atl={desc}
   />
