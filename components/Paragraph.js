@@ -8,7 +8,7 @@ const mapping = {
     img: params => <Box textAlign={'center'}><ImageConstructor {...params}/></Box>
 }
 const Paragraph = ({title, content}) =>(
-    <Box sx={{padding: "0 200px"}}>
+    <Box sx={{padding: {md: "0 200px", xs: 0}}}>
         <Typography component={'h2'} variant='h4' mb={5} textAlign={'center'}>{title}</Typography>
         {/* override headers */}
         <MuiMarkdown overrides={
