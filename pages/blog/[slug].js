@@ -50,7 +50,7 @@ export const getServerSideProps = async props =>{
         'fields.slug': slug
       })
     return {
-        props: {...articles.items[0].fields, slug}
+        props: {...articles.items[0]?.fields, slug}
     }
 }
 
