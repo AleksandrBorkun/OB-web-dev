@@ -21,11 +21,11 @@ const BlogArticle = ({
   return (
     <>
       <MetaHead
-        {...metaHead.fields}
+        {...metaHead?.fields}
         metaUrl={`https://obweb.dev/learn/${slug}`}
       />
       <Stack spacing={{ xs: 1, sm: 2, md: 4 }}>
-        <ImageConstructor isCover {...cover.fields} />
+        <ImageConstructor isCover {...cover?.fields} />
         <Breadcrumbs
           mt={10}
           mb={5}
@@ -50,7 +50,7 @@ const BlogArticle = ({
         <Typography component={"h6"} variant="h6">
           {new Date(date).toDateString()}
         </Typography>
-        {content.map((component) => renderComponent(component))}
+        {content?.map((component) => renderComponent(component))}
         <Divider variant="middle" />
         <Box sx={{ display: "flex", alignItems: "center" }}>
           <SignUpForm />
@@ -68,7 +68,7 @@ export const getServerSideProps = async (props) => {
     "fields.slug": slug,
   });
   return {
-    props: { ...articles.items[0].fields, slug },
+    props: { ...articles.items[0]?.fields, slug },
   };
 };
 

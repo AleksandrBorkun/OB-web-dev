@@ -27,14 +27,14 @@ export const ImageConstructor = ({
   src,
   alt,
 }) => {
-  const url = src || file.url;
+  const url = src || file?.url;
   const desc = alt || description || title
-  const query = url.split('?')[1] ? '' : '?fm=webp&q=80'
+  const query = url?.split('?')[1] ? '' : '?fm=webp&q=80'
   return (<Image
     styles={styles}
     isCover={isCover}
     src={
-      url.indexOf("//") === 0 ? `https:${url}${query}` : url
+      url?.indexOf("//") === 0 ? `https:${url}${query}` : url
     }
     atl={desc}
   />

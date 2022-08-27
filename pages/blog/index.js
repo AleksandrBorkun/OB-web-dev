@@ -25,6 +25,7 @@ const Blog = ({ articles }) => {
           {getTranslation("blog")}
         </Typography>
       </Box>
+      
       <Grid container spacing={2} mt={4}>
         {articles.map(({fields : { slug, content, cover, ...props }}, key) => (
           <Grid key={key} item>
