@@ -1,6 +1,8 @@
+import { Box } from "@mui/system";
 import MetaHead from "components/MetaHead";
 import { getEntries } from "contentful/client";
 import { renderComponent } from "contentful/utils";
+import { SignUpForm } from "./about";
 
 
 const Home = ({data, metaHead}) => {
@@ -9,6 +11,9 @@ const Home = ({data, metaHead}) => {
     <>
     <MetaHead {...metaHead} metaUrl={'https://obweb.dev'}/>
     {data && data.map(content => renderComponent(content))}
+    <Box sx={{textAlign: 'center', mt: 4}}>
+      <SignUpForm/>
+    </Box>
     </>
   );
 };

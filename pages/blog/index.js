@@ -25,9 +25,18 @@ const Blog = ({ articles }) => {
           {getTranslation("blog")}
         </Typography>
       </Box>
-      
-      <Grid container spacing={2} mt={4}>
-        {articles.map(({fields : { slug, content, cover, ...props }}, key) => (
+
+      <Grid
+        container
+        spacing={2}
+        mt={4}
+        sx={{
+          display: { md: "grid" },
+          gridTemplateColumns: { md: "repeat(4, 1fr)" },
+          justifyContent: {xs: 'center'}
+        }}
+      >
+        {articles.map(({ fields: { slug, content, cover, ...props } }, key) => (
           <Grid key={key} item>
             <Card href={`/blog/${slug}`} {...props} image={cover.fields} />
           </Grid>

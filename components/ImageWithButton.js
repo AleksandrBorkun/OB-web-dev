@@ -9,8 +9,8 @@ const ImageWithButton = ({
   buttonText,
   buttonLink,
 }) => (
-  <Box height={'100%'} maxHeight={{md: '600px'}}>
-    <ImageConstructor {...image.fields} styles={`max-height : 60%;`}/>
+  <Box height={'100%'}>
+    <ImageConstructor {...image.fields} styles={`max-height : 350px;`}/>
     <Typography component={"h2"} variant='h4'>{title}</Typography>
     <Typography component={"h4"} variant='h6' sx={{marginTop: 2}}>{description}</Typography>
     <Button variant="text" href={buttonLink} size='large' sx={{marginTop: 4}}>

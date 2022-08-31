@@ -33,7 +33,7 @@ const VideoBlock = ({videoId}) => {
     {screenWidth && <YouTube
       videoId={videoId}
       opts={screenWidth > 768 ? optsDesktop : optsMobile}
-      // onReady={({ target }) => target.pauseVideo()}
+      onReady={({ target }) => target.pauseVideo()}
     />}
   </Box>
 )};

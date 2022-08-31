@@ -10,7 +10,8 @@ const translations = {
         'form.acceptTerms': 'Я даю згоду на використання моїх данних згідно з політикою конфіденціальності',
         'form.submit': 'Відправити',
         'form.subscribed': "Дякую за підписку!",
-        'form.title': 'Підписатися на новини'
+        'form.title': 'Отримати WebDev Essential курс безкоштовно',
+        'latest-videos': "Останні новини",
     },
     ru: {
         blog: "Блог",
@@ -23,7 +24,8 @@ const translations = {
         'form.acceptTerms': 'Даю согласие на использование моих данных в соответствии с политикой конфиденциальности',
         'form.submit': "Отправить",
         'form.subscribed': "Спасибо за подписку!",
-        'form.title': 'Подписаться на новоcтную рассылку'
+        'form.title': 'Получить WebDev Essential курс бесплатно',
+        'latest-videos': "Последние загрузки",
     },
     en:{
         blog: "Blog",
@@ -36,10 +38,11 @@ const translations = {
         'form.acceptTerms': 'I accept and agree that my inforamtion wioll be used in accordance with privacy policy',
         'form.submit': "Sumbit",
         'form.subscribed': "Thanks for submission!",
-        'form.title': 'Subscribe for Newsletter'
+        'form.title': 'Get WebDev Essential course for free',
+        'latest-videos': "Latest uploads",
     }
 }
 
 export const getTranslation = (key, lang='ru') =>{
-    return translations[lang][key]
+    return translations[lang][key] || key
 }
