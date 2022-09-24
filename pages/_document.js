@@ -5,18 +5,34 @@ export default function Document() {
   return (
     <Html prefix="og: http://ogp.me/ns#" lang="ru">
       <Head>
-      {/* <!-- Google tag (gtag.js) --> */}
-      <link rel="icon" href="favicon.ico" type="image/x-icon" />
-      <link rel="apple-touch-icon" href="favicon.ico" type="image/png" />
-      <meta name="apple-mobile-web-app-capable" content="yes" />
-      <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-      {!isLocal && <meta name="google-site-verification" content="_Mj2o2Y4toCnhEhzYpsG9_P1hhAQkQzGIWK7ExsZv4g" />}
-      {!isLocal && <script async src="https://www.googletagmanager.com/gtag/js?id=G-3P12M9V37J"></script>}
-      {!isLocal && <script dangerouslySetInnerHTML={{__html:`
+        {/* <!-- Google tag (gtag.js) --> */}
+        <link rel="icon" href="../favicon.ico" type="image/x-icon" />
+        <link rel="apple-touch-icon" href="../favicon.ico" type="image/png" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        {!isLocal && (
+          <meta
+            name="google-site-verification"
+            content="_Mj2o2Y4toCnhEhzYpsG9_P1hhAQkQzGIWK7ExsZv4g"
+          />
+        )}
+        {!isLocal && (
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-3P12M9V37J"
+          ></script>
+        )}
+        {!isLocal && (
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'G-3P12M9V37J');`}}/>}
+        gtag('config', 'G-3P12M9V37J');`,
+            }}
+          />
+        )}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
         <link
