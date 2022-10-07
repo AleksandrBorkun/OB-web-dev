@@ -9,6 +9,9 @@ import {
   Button,
 } from "@mui/material";
 import axios from "axios";
+import MetaHead from "components/MetaHead";
+import { getEntries } from "contentful/client";
+import { renderComponent } from "contentful/utils";
 import { useState } from "react";
 import { getTranslation } from "translations";
 
@@ -35,7 +38,9 @@ export const SignUpForm = () => {
       sx={{ maxWidth: { md: 600, xs: "100%", margin: "2em auto" } }}
       onSubmit={handleSubmit}
     >
-      <Typography variant="h4" component={'h2'} textAlign={'center'}>{getTranslation('form.title')}</Typography>
+      <Typography variant="h4" component={"h2"} textAlign={"center"}>
+        {getTranslation("form.title")}
+      </Typography>
       <TextField
         required
         id="name"
@@ -79,29 +84,47 @@ export const SignUpForm = () => {
   );
 };
 
-const About = () => (
-  <Stack>
-    <Box
-      height={"300px"}
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        backgroundColor: "divider",
-        mt: 2,
-      }}
-    >
-      <Typography
-        textAlign={"center"}
-        margin={"auto 0"}
-        component={"h1"}
-        variant={"h3"}
+const About = ({ metaHead, content }) => (
+  <>
+    <MetaHead {...metaHead} metaUrl={"https://mirakids.net/about"} />
+    <Stack>
+      <Box
+        height={"300px"}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "divider",
+          mt: 2,
+        }}
       >
-        {getTranslation("about")}
-      </Typography>
-    </Box>
-    <SignUpForm />
-  </Stack>
+        <Typography
+          textAlign={"center"}
+          margin={"auto 0"}
+          component={"h1"}
+          variant={"h3"}
+        >
+          {getTranslation("about")}
+        </Typography>
+      </Box>
+
+      {renderComponent(content[0])}
+
+      <SignUpForm />
+    </Stack>
+  </>
 );
+
+export const getStaticProps = async () => {
+  const article = (
+    await getEntries({
+      content_type: "blogArticle",
+      "fields.slug": "about",
+    })
+  ).items[0];
+  return {
+    props: { ...article.fields },
+  };
+};
 
 export default About;
