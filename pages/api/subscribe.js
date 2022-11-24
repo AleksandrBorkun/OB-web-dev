@@ -1,4 +1,4 @@
-const client = require("mailchimp-marketing");
+const client = require("@mailchimp/mailchimp_marketing");
 
 const API_KEY = process.env.MAILCHIMP_API_KEY;
 const SERVER_PREFIX = "us14";
