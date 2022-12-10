@@ -17,7 +17,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import { Circle, Title } from "components/OBDev";
 import { Link } from "components/Link";
 import { getTranslation } from "translations";
-import { List, ListItem, ListItemText } from "@mui/material";
+import { List, ListItem } from "@mui/material";
 
 import SmartDisplayIcon from "@mui/icons-material/SmartDisplay";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
@@ -84,6 +84,9 @@ const SearchContainer = styled("div")(({ theme }) => ({
   },
   [theme.breakpoints.down("sm")]: {
     maxWidth: "100px",
+  },
+  ["@media (max-width: 400px)"]: {
+    display: "none",
   },
 }));
 

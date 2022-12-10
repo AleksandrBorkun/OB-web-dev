@@ -15,13 +15,15 @@ import { renderComponent } from "contentful/utils";
 import { useState } from "react";
 import { getTranslation } from "translations";
 
-export const SignUpForm = () => {
+export const SignUpForm = ({ title }) => {
   const [checked, setChecked] = useState(false);
   const [isSubmitted, setSubmitted] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!checked) return false;
+    if (!checked) {
+      return false;
+    }
     const data = {
       name: event.target.name.value,
       email: event.target.email.value,
@@ -38,8 +40,13 @@ export const SignUpForm = () => {
       sx={{ maxWidth: { md: 600, xs: "100%", margin: "2em auto" } }}
       onSubmit={handleSubmit}
     >
-      <Typography variant="h4" component={"h2"} textAlign={"center"}>
-        {getTranslation("form.title")}
+      <Typography
+        variant="h3"
+        component={"h2"}
+        textAlign={"center"}
+        id={"sign-up-form"}
+      >
+        {title || getTranslation("form.title")}
       </Typography>
       <TextField
         required
@@ -66,7 +73,11 @@ export const SignUpForm = () => {
       </Typography>
       <FormControlLabel
         control={
-          <Checkbox checked={checked} onChange={() => setChecked(!checked)} />
+          <Checkbox
+            checked={checked}
+            required
+            onChange={() => setChecked(!checked)}
+          />
         }
         label={getTranslation("form.acceptTerms")}
         sx={{ mt: 2 }}
@@ -102,7 +113,7 @@ const About = ({ metaHead, content }) => (
           textAlign={"center"}
           margin={"auto 0"}
           component={"h1"}
-          variant={"h3"}
+          variant={"h1"}
         >
           {getTranslation("about")}
         </Typography>

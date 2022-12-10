@@ -11,6 +11,11 @@ const MetaHead = ({
 }) => (
   <Head>
     {/* Open Graph tags  */}
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    ></meta>
     {metaTitle && (
       <>
         <meta property="og:title" content={metaTitle} />
@@ -35,5 +40,4 @@ const MetaHead = ({
   </Head>
 );
 
-
-export default MetaHead
+export default MetaHead;

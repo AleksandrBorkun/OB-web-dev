@@ -14,6 +14,10 @@ const translations = {
     "form.subscribed": "Дякую за підписку!",
     "form.title": "Отримати знижку на WebDev Essential курс",
     "latest-videos": "Останні новини",
+    "course.unfinished": "Дата курса невідома",
+    "course.buy": "Купити негайно!",
+    "course.notify": "Слідкувати за курсом",
+    "course.notify.signup": "Отримати новий курс першим",
   },
   ru: {
     blog: "Блог",
@@ -30,6 +34,10 @@ const translations = {
     "form.subscribed": "Спасибо за подписку!",
     "form.title": "Получить скидку на курс основы WebDev",
     "latest-videos": "Последние загрузки",
+    "course.unfinished": "Дата курса не объявленна",
+    "course.buy": "Купить сейчас!",
+    "course.notify": "Следить за курсом",
+    "course.notify.signup": "Следить за выходом новых курсов",
   },
   en: {
     blog: "Blog",
@@ -46,6 +54,10 @@ const translations = {
     "form.subscribed": "Thanks for submission!",
     "form.title": "Get WebDev Essential course for less then 10$",
     "latest-videos": "Latest uploads",
+    "course.unfinished": "To be announced",
+    "course.buy": "Buy Now!",
+    "course.notify": "Notify Me",
+    "course.notify.signup": "Notify Me when new course arrived",
   },
 };
 

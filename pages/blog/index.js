@@ -20,7 +20,7 @@ const Blog = ({ articles }) => {
           textAlign={"center"}
           margin={"auto 0"}
           component={"h1"}
-          variant={"h3"}
+          variant={"h1"}
         >
           {getTranslation("blog")}
         </Typography>
@@ -33,7 +33,7 @@ const Blog = ({ articles }) => {
         sx={{
           display: { md: "grid" },
           gridTemplateColumns: { md: "repeat(4, 1fr)" },
-          justifyContent: {xs: 'center'}
+          justifyContent: { xs: "center" },
         }}
       >
         {articles.map(({ fields: { slug, content, cover, ...props } }, key) => (
