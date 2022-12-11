@@ -85,7 +85,7 @@ const SearchContainer = styled("div")(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
     maxWidth: "100px",
   },
-  ["@media (max-width: 400px)"]: {
+  ["@media (max-width: 600px)"]: {
     display: "none",
   },
 }));

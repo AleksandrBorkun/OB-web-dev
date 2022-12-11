@@ -5,44 +5,76 @@ import { StarIcon } from "./Icons";
 import MuiMarkdown from "mui-markdown";
 import { getTranslation } from "translations";
 import { markdownOverrides } from "./Paragraph";
+import { useRef, useState } from "react";
+
+const NextBtn = styled.a`
+  font-size: 3rem;
+  float: right;
+  margin-top: 1rem;
+  position: absolute;
+  bottom: auto;
+  right: 0;
+
+  @media (min-width: 600px) {
+    display: none;
+  }
+`;
 
 const CoursesWrapper = styled.div`
-  margin: 35px 0;
-  overflow-x: scroll;
+  margin: 3.5rem 0;
+  overflow-x: hidden;
+  @media (min-width: 600px) {
+    margin: 3.5rem 0;
+    overflow: scroll;
+  }
   @media (min-width: 1000px) {
     overflow: visible;
   }
 `;
 const CoursesHolder = styled.div`
   display: flex;
-  justify-content: center;
   gap: 0.75rem;
-  width: 900px;
-  @media (min-width: 1000px) {
-    width: auto;
+  min-width: 1200px;
+  justify-content: flex-start;
+
+  @media (min-width: 600px) {
     gap: 2.25rem;
+    min-width: 1000px;
+  }
+  @media (min-width: 900px) {
+    justify-content: center;
+    width: auto;
   }
   @media (min-width: 1200px) {
-    gap: 5.625rem;
+    gap: 4rem;
   }
 `;
 
 const CardHolder = styled.div`
-  width: 290px;
   background-color: rgba(255, 255, 255, 0.09);
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-
+  width: 90vw;
   display: grid;
   grid-column: 1;
-  grid-template-rows: 100px 66px 163px 42px 68px 44px;
+  grid-template-rows: 4fr 2fr 8fr 2fr 3fr 2fr;
   transition: .5s ease;
 
-@media (min-width: 1200px){
 
-  grid-template-rows: 100px 66px 163px 42px 68px 60px;
+  @media (min-width: 600px){
+    width: 18.125rem;
+    grid-template-rows: 5fr 3fr 12fr 3fr 4fr 4fr;
+  }
+
+@media (min-width: 1200px){
+  width: 20rem;
 }
+
+@media (min-width: 1200px){
+  // width: 380px;
+}
+
 
   &:hover{
   @media (min-width: 1000px) {
@@ -89,8 +121,16 @@ const Disclaimer = styled.div`
   padding: 12px 13px;
 `;
 
-const CourseCard = ({ title, subtitle, info, btnHref, discalimer, stars }) => (
-  <CardHolder angle={stars}>
+const CourseCard = ({
+  title,
+  subtitle,
+  info,
+  btnHref,
+  discalimer,
+  stars,
+  refr,
+}) => (
+  <CardHolder angle={stars} ref={refr}>
     <StarHolder>
       {new Array(stars).fill(1).map((_, key) => (
         <StarIcon key={key} />
@@ -100,16 +140,7 @@ const CourseCard = ({ title, subtitle, info, btnHref, discalimer, stars }) => (
     <Typography component={"h3"} variant={"h3"} textAlign="center">
       {title}
     </Typography>
-    <Typography
-      sx={{
-        fontSize: {
-          lg: "1rem",
-        },
-      }}
-      component={"p"}
-      variant={"body1"}
-      padding={"13px"}
-    >
+    <Typography component={"p"} variant={"body1"} padding={"13px"}>
       {subtitle}
     </Typography>
     <Info withPadding={!btnHref}>
@@ -139,25 +170,50 @@ const CourseCard = ({ title, subtitle, info, btnHref, discalimer, stars }) => (
   </CardHolder>
 );
 
-export const CourseCardsGrid = ({ content, title }) => (
-  <>
-    <Typography
-      component={"h2"}
-      variant={"h2"}
-      color={PURPLE_MAIN}
-      maxWidth="1100px"
-      sx={{
-        margin: "auto",
-      }}
-    >
-      {title}
-    </Typography>
-    <CoursesWrapper>
-      <CoursesHolder>
-        {content.map((course) => (
-          <CourseCard key={course.title} {...course} />
-        ))}
-      </CoursesHolder>
-    </CoursesWrapper>
-  </>
-);
+export const CourseCardsGrid = ({ content, title }) => {
+  const [currentActive, setCurrentActive] = useState(0);
+  const cardsRefs = {
+    0: useRef(),
+    1: useRef(),
+    2: useRef(),
+    3: useRef(),
+  };
+
+  const handleNextClick = () => {
+    const nextActive = currentActive + 1 > 2 ? 0 : currentActive + 1;
+    console.log(cardsRefs[nextActive].current);
+    setCurrentActive(nextActive);
+
+    cardsRefs[nextActive].current.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+      inline: "nearest",
+    });
+  };
+
+  return (
+    <>
+      <Typography
+        component={"h2"}
+        variant={"h2"}
+        color={PURPLE_MAIN}
+        maxWidth="1100px"
+        sx={{
+          margin: "auto",
+        }}
+      >
+        {title}
+      </Typography>
+      <CoursesWrapper ref={parent}>
+        <CoursesHolder>
+          {content.map((course, key) => (
+            <CourseCard refr={cardsRefs[key]} key={course.title} {...course} />
+          ))}
+        </CoursesHolder>
+        <NextBtn type="button" onClick={handleNextClick}>
+          &#8594;
+        </NextBtn>
+      </CoursesWrapper>
+    </>
+  );
+};

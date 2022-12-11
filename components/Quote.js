@@ -5,6 +5,7 @@ import { PURPLE_MAIN } from "./const/colors";
 const QuoteWrapper = styled.div`
   display: flex;
   margin: 3rem auto;
+  margin-top: 4rem;
   align-items: center;
   gap: 1rem;
   background: rgba(255, 255, 255, 0.04);
@@ -22,7 +23,7 @@ const QuoteWrapper = styled.div`
     font-size: 8rem;
     position: absolute;
     right: 0;
-    top: -1.7rem;
+    top: -3.8rem;
   }
 
   &::after {
@@ -40,25 +41,26 @@ const QuoteWrapper = styled.div`
     transition: 0.4s ease;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: 600px) {
     flex-direction: row;
     max-width: 1000px;
-    margin: 2rem auto;
     margin-bottom: 5rem;
     padding: 12px 36px;
   }
 
-  &:hover {
-    &::after {
-      width: 50%;
-      height: 1.5rem;
+  @media (min-width: 1000px) {
+    &:hover {
+      &::after {
+        width: 50%;
+        height: 1.5rem;
+      }
+      transform: translateY(-20px);
     }
-    transform: translateY(-20px);
   }
 `;
 
 const QuoteImageWraper = styled.div`
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     position: absolute;
     top: -40px;
     left: 0;
@@ -70,7 +72,7 @@ const QuoteImage = styled.img`
   border-radius: 50px;
   object-fit: cover;
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     width: 80px;
     height: 80px;
   }

@@ -31,7 +31,6 @@ let darkTheme = createTheme({
     },
     body1: {
       fontSize: "1.125rem",
-      lineHeight: "1",
       fontWeight: 400,
     },
     fontFamily: [
