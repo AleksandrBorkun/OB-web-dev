@@ -22,10 +22,9 @@ const NextBtn = styled.a`
 
 const CoursesWrapper = styled.div`
   margin: 3.5rem 0;
-  overflow-x: hidden;
+  overflow: scroll;
   @media (min-width: 600px) {
     margin: 3.5rem 0;
-    overflow: scroll;
   }
   @media (min-width: 1000px) {
     overflow: visible;
