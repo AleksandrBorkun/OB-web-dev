@@ -20,7 +20,7 @@ const Blog = ({ articles }) => {
           textAlign={"center"}
           margin={"auto 0"}
           component={"h1"}
-          variant={"h3"}
+          variant={"h1"}
         >
           {getTranslation("learn")}
         </Typography>

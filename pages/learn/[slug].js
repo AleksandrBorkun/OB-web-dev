@@ -43,11 +43,11 @@ const BlogArticle = ({
         <Typography component={"h1"} variant="h2">
           {title}
         </Typography>
-        <Typography component={"h5"} variant={"h5"}>
+        <Typography component={"h5"} variant={"body1"}>
           {description}
         </Typography>
         {/* reformat date later */}
-        <Typography component={"h6"} variant="h6">
+        <Typography component={"h6"} variant="body1">
           {new Date(date).toDateString()}
         </Typography>
         {content?.map((component) => renderComponent(component))}

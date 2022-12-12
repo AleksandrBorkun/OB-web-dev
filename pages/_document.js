@@ -3,7 +3,11 @@ import { Html, Head, Main, NextScript } from "next/document";
 const isLocal = process.env.LOCAL_ENV;
 export default function Document() {
   return (
-    <Html prefix="og: http://ogp.me/ns#" lang="ru">
+    <Html
+      prefix="og: http://ogp.me/ns#"
+      lang="ru"
+      style={{ scrollBehavior: "smooth" }}
+    >
       <Head>
         {/* <!-- Google tag (gtag.js) --> */}
         <link rel="icon" href="../favicon.ico" type="image/x-icon" />
