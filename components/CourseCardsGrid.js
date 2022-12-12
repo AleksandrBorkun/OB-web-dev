@@ -204,7 +204,7 @@ export const CourseCardsGrid = ({ content, title }) => {
       >
         {title}
       </Typography>
-      <CoursesWrapper ref={parent}>
+      <CoursesWrapper>
         <CoursesHolder>
           {content.map((course, key) => (
             <CourseCard refr={cardsRefs[key]} key={course.title} {...course} />
