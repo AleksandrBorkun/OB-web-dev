@@ -58,39 +58,48 @@ const CardHolder = styled.div`
   display: grid;
   grid-column: 1;
   grid-template-rows: 4fr 2fr 8fr 2fr 3fr 2fr;
-  transition: .5s ease;
+  transition: 0.5s ease;
 
-
-  @media (min-width: 600px){
+  @media (min-width: 600px) {
     width: 18.125rem;
     grid-template-rows: 5fr 3fr 12fr 3fr 4fr 4fr;
   }
 
-@media (min-width: 1200px){
-  width: 20rem;
-}
-
-@media (min-width: 1200px){
-  // width: 380px;
-}
-
-
-  &:hover{
-  @media (min-width: 1000px) {
-
-    ${({ angle }) =>
-      angle < 3
-        ? `
-    transform: perspective(800px) rotateY(10deg) scale(1.1) rotateX(5deg);
-    box-shadow: 0 0 0 2px ${PURPLE_MAIN},-40px 4px 16px -18px rgba(255,255,255,.09);
-    `
-        : `
-        transform: perspective(800px) rotateY(-10deg) scale(1.1) rotateX(5deg);
-        box-shadow: 0 0 0 2px ${PURPLE_MAIN},40px 4px 16px -18px rgba(255,255,255,.09);
-        `}
+  @media (min-width: 1200px) {
+    width: 20rem;
   }
-}
-}
+
+  @media (min-width: 1000px) {
+    &:hover {
+      ${({ angle }) =>
+        angle < 3
+          ? `
+      transform: perspective(800px) rotateY(10deg) rotateX(5deg) scale(1.1);
+      box-shadow: 0 0 0 2px ${PURPLE_MAIN},
+        -40px 4px 16px -18px rgba(255, 255, 255, 0.09);
+
+      h3,
+      span,
+      p,
+      li {
+        text-shadow: -2px 5px 5px black;
+      }
+      `
+          : `
+          transform: perspective(800px) rotateY(-10deg) rotateX(5deg) scale(1.1);
+          box-shadow: 0 0 0 2px ${PURPLE_MAIN},
+            40px 4px 16px -18px rgba(255, 255, 255, 0.09);
+    
+          h3,
+          span,
+          p,
+          li {
+            text-shadow: 2px 5px 5px black;
+          }
+      
+      `}
+    }
+  }
 `;
 
 const StarHolder = styled.div`

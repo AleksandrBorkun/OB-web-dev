@@ -34,11 +34,21 @@ const QuoteWrapper = styled.div`
     height: 2rem;
     background: rgba(255, 255, 255, 0.05);
     bottom: -50px;
-    filter: blur(18px);
     border-radius: 50%;
     left: calc(50%);
     transform: translate(-50%);
     transition: 0.4s ease;
+    filter: blur(18px);
+  }
+
+  @media (min-width: 1000px) {
+    &:hover {
+      transform: translateY(-20px);
+      &::after {
+        width: 50%;
+        height: 1.5rem;
+      }
+    }
   }
 
   @media (min-width: 600px) {
@@ -46,16 +56,6 @@ const QuoteWrapper = styled.div`
     max-width: 1000px;
     margin-bottom: 5rem;
     padding: 12px 36px;
-  }
-
-  @media (min-width: 1000px) {
-    &:hover {
-      &::after {
-        width: 50%;
-        height: 1.5rem;
-      }
-      transform: translateY(-20px);
-    }
   }
 `;
 
