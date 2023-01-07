@@ -6,11 +6,19 @@
       xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://obweb.dev/</loc>
-        <lastmod>2022-08-22</lastmod>
+        <lastmod>2023-01-07</lastmod>
     </url>
     <url>
         <loc>https://obweb.dev/blog/</loc>
         <lastmod>2022-08-22</lastmod>
+    </url>
+    <url>
+        <loc>https://obweb.dev/learn/osnovy-web-razrabotki-html-css-js-dlya-nachinayushikh/</loc>
+        <lastmod>2023-01-07</lastmod>
+    </url>
+    <url>
+        <loc>https://obweb.dev/blog/rekursiya-na-primere-posledovatelnosti-fibonachchi/</loc>
+        <lastmod>2023-01-07</lastmod>
     </url>
     <url>
         <loc>https://obweb.dev/blog/array-sorting-js</loc>

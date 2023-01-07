@@ -22,7 +22,7 @@ export const Circle = styled.span`
     content: "";
     position: absolute;
     left: -15px;
-    top: -0.75rem;
+    top: -0.5rem;
     height: 50px;
     width: 50px;
     background-color: #8613a5;
