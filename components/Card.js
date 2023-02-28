@@ -19,7 +19,7 @@ function ActionAreaCard({
         <CardMedia
           component="img"
           height="140"
-          image={`http:${image.file?.url}?fm=webp&q=80`}
+          image={`http:${image.file?.url}?fm=webp&q=80&w=500`}
           alt={image.description | image.title}
         />
         <CardContent
