@@ -1,7 +1,7 @@
 const translations = {
   ua: {
     blog: "Блог",
-    learn: "Вивчати",
+    learn: "Курси",
     search: "Пошук...",
     about: "Про нас",
     "form.name": "Ім'я",
@@ -21,7 +21,7 @@ const translations = {
   },
   ru: {
     blog: "Блог",
-    learn: "Обучение",
+    learn: "Курсы",
     search: "Найти...",
     about: "О нас",
     "form.name": "Имя",
@@ -41,7 +41,7 @@ const translations = {
   },
   en: {
     blog: "Blog",
-    learn: "Learn",
+    learn: "Courses",
     search: "Search",
     about: "About",
     "form.name": "Name",

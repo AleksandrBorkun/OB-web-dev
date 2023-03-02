@@ -13,6 +13,14 @@
         <lastmod>2022-08-22</lastmod>
     </url>
     <url>
+        <loc>https://obweb.dev/blog/binarnoe-derevo-v-javascript-opisanie-i-realizaciya/</loc>
+        <lastmod>2023-03-02</lastmod>
+    </url>
+    <url>
+        <loc>https://obweb.dev/blog/staticheskaya-generaciya-i-servernyi-rendering-v-next-js/</loc>
+        <lastmod>2023-03-02</lastmod>
+    </url>
+    <url>
         <loc>https://obweb.dev/blog/asinkhronnyi-kod-v-js-ispolzuem-promise-await-i-then-podkhody/</loc>
         <lastmod>2023-02-28</lastmod>
     </url>
@@ -59,6 +67,10 @@
     <url>
         <loc>https://obweb.dev/learn/integraciya-saita-s-email-maktetingovoi-platformoi-mailchimp</loc>
         <lastmod>2022-09-05</lastmod>
+    </url>
+    <url>
+        <loc>https://obweb.dev/blog/integraciya-saita-s-email-maktetingovoi-platformoi-mailchimp</loc>
+        <lastmod>2023-03-02</lastmod>
     </url>
     <url>
         <loc>https://obweb.dev/blog/kak-sdelat-html5-igru-na-chistom-js-delaem-flappy-bird-chast-1</loc>
