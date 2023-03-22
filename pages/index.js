@@ -120,9 +120,14 @@ export const getStaticProps = async (props) => {
         },
         {
           stars: 2,
-          title: "React JS",
+          title: "React + NextJS",
           subtitle:
             "Вы уже изучили основы и готовы двинуться дальше к изучению современных библиотек и написанию полноценного с динамическими данными.",
+          btnHref:
+            "https://www.udemy.com/course/react-nextjs-dev/?couponCode=7C8D64776F1DF6A57815",
+          info: `- динамические страницы\n- настройка CMS`,
+          discalimer:
+            "Альтернативная ссылка [boosty](https://boosty.to/obwebdev/posts/4cc6322d-fb69-4583-8c73-91719428c149?share=post_link)",
         },
         {
           stars: 3,
