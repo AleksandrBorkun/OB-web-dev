@@ -51,6 +51,13 @@ export default function Document() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
         />
+        {!isLocal && (
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3654540844516810"
+            crossOrigin="anonymous"
+          ></script>
+        )}
       </Head>
       <body>
         <Main />
