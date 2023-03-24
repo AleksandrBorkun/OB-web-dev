@@ -256,7 +256,7 @@ const Search = () => {
   return (
     <SearchContainer ref={ref}>
       <SearchIconWrapper>
-        <SearchIcon />
+        <SearchIcon width={"48px"} height={"48px"} />
       </SearchIconWrapper>
       <StyledInputBase
         placeholder={getTranslation(searchPlaceholderTxt)}
