@@ -114,9 +114,9 @@ export const getStaticProps = async (props) => {
             "Это первый курс в серии web разработки где вы познакомитесь с редактором кода, настроите свой компьютер для работы, узнаете что такое Git, как работать с JavaScript, CSS и HTML.",
           info: `- 6ч. видеоматериалов\n- лекции + практика + тесты`,
           btnHref:
-            "https://www.udemy.com/course/basic-web-dev/?couponCode=3FA4EE669724948DEB05",
+            "https://www.udemy.com/course/basic-web-dev/?couponCode=1C5DA9FAC51DFED5ABE7",
           discalimer:
-            "Альтернативная ссылка [boosty](https://boosty.to/obwebdev)",
+            "Альтернативная ссылка [boosty](https://boosty.to/obwebdev/posts/ad1e2929-3478-4d80-bf23-07671b9e46b1?share=post_link)",
         },
         {
           stars: 2,
