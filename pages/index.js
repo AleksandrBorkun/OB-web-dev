@@ -114,7 +114,7 @@ export const getStaticProps = async (props) => {
             "Это первый курс в серии web разработки где вы познакомитесь с редактором кода, настроите свой компьютер для работы, узнаете что такое Git, как работать с JavaScript, CSS и HTML.",
           info: `- 6ч. видеоматериалов\n- лекции + практика + тесты`,
           btnHref:
-            "https://www.udemy.com/course/basic-web-dev/?couponCode=95ED1C8D6A07A18E3CC6",
+            "https://www.udemy.com/course/basic-web-dev/?couponCode=DBFBCD3496071D0F9084",
           discalimer:
             "Альтернативная ссылка [boosty](https://boosty.to/obwebdev/posts/ad1e2929-3478-4d80-bf23-07671b9e46b1?share=post_link)",
         },
@@ -124,7 +124,7 @@ export const getStaticProps = async (props) => {
           subtitle:
             "Вы уже изучили основы и готовы двинуться дальше к изучению современных библиотек и написанию полноценного сайта с динамическими данными.",
           btnHref:
-            "https://www.udemy.com/course/react-nextjs-dev/?couponCode=388CB874BA5BB664D271",
+            "https://www.udemy.com/course/react-nextjs-dev/?couponCode=5596E8E4888C41406955",
           info: `- динамические страницы\n- настройка CMS`,
           discalimer:
             "Альтернативная ссылка [boosty](https://boosty.to/obwebdev/posts/4cc6322d-fb69-4583-8c73-91719428c149?share=post_link)",
