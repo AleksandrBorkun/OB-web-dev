@@ -119,6 +119,17 @@ export const getStaticProps = async (props) => {
             "Альтернативная ссылка [boosty](https://boosty.to/obwebdev/posts/ad1e2929-3478-4d80-bf23-07671b9e46b1?share=post_link)",
         },
         {
+          stars: 1,
+          title: "Git Essentials",
+          subtitle:
+            "На этом курсе вы освоите основы работы с Git и научитесь эффективно использовать ключевые команды для контроля версий, сотрудничества и управления изменениями в своих проектах.",
+          info: `- решение конфликтов\n- rebase и cherry-pick`,
+          btnHref:
+            "https://www.udemy.com/course/git-ob-web-dev/?couponCode=OBWEBDEV",
+          discalimer:
+            "Альтернативная ссылка [boosty](https://boosty.to/obwebdev/posts/1529b1b3-0f5e-42c5-963d-19d3f21b8cd8?share=post_link)",
+        },
+        {
           stars: 2,
           title: "React + NextJS",
           subtitle:
@@ -129,12 +140,12 @@ export const getStaticProps = async (props) => {
           discalimer:
             "Альтернативная ссылка [boosty](https://boosty.to/obwebdev/posts/4cc6322d-fb69-4583-8c73-91719428c149?share=post_link)",
         },
-        {
-          stars: 3,
-          title: "Full Stack app",
-          subtitle:
-            "Вы уже изучили основы и знаете чего хотите. Вы готовы не только написать сайт но и хотите поработать с базой данных и настроить CI/CD для вашего веб приложения.",
-        },
+        // {
+        //   stars: 3,
+        //   title: "Full Stack app",
+        //   subtitle:
+        //     "Вы уже изучили основы и знаете чего хотите. Вы готовы не только написать сайт но и хотите поработать с базой данных и настроить CI/CD для вашего веб приложения.",
+        // },
       ],
     },
     comments: {
