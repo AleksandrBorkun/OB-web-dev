@@ -114,7 +114,7 @@ export const getStaticProps = async (props) => {
             "Это первый курс в серии web разработки где вы познакомитесь с редактором кода, настроите свой компьютер для работы, узнаете что такое Git, как работать с JavaScript, CSS и HTML.",
           info: `- 6ч. видеоматериалов\n- лекции + практика + тесты`,
           btnHref:
-            "https://www.udemy.com/course/basic-web-dev/?couponCode=OBWEBDEV",
+            "https://www.udemy.com/course/basic-web-dev/?couponCode=BB5BE3E7F7E106A8F5BB",
           discalimer:
             "Альтернативная ссылка [boosty](https://boosty.to/obwebdev/posts/ad1e2929-3478-4d80-bf23-07671b9e46b1?share=post_link)",
         },
@@ -125,7 +125,7 @@ export const getStaticProps = async (props) => {
             "На этом курсе вы освоите основы работы с Git и научитесь эффективно использовать ключевые команды для контроля версий, сотрудничества и управления изменениями в своих проектах.",
           info: `- решение конфликтов\n- rebase и cherry-pick`,
           btnHref:
-            "https://www.udemy.com/course/git-ob-web-dev/?couponCode=OBWEBDEV",
+            "https://www.udemy.com/course/git-ob-web-dev/?couponCode=ED9D3F59020567C33D7A",
           discalimer:
             "Альтернативная ссылка [boosty](https://boosty.to/obwebdev/posts/1529b1b3-0f5e-42c5-963d-19d3f21b8cd8?share=post_link)",
         },
@@ -135,7 +135,7 @@ export const getStaticProps = async (props) => {
           subtitle:
             "Вы уже изучили основы и готовы двинуться дальше к изучению современных библиотек и написанию полноценного сайта с динамическими данными.",
           btnHref:
-            "https://www.udemy.com/course/react-nextjs-dev/?couponCode=OBWEBDEV",
+            "https://www.udemy.com/course/react-nextjs-dev/?couponCode=683C4DDBF1168D7554AE",
           info: `- динамические страницы\n- настройка CMS`,
           discalimer:
             "Альтернативная ссылка [boosty](https://boosty.to/obwebdev/posts/4cc6322d-fb69-4583-8c73-91719428c149?share=post_link)",
